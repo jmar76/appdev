@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask_cors import CORS
 import db
 from models import Tarea
 from models import Sinergias
@@ -6,6 +7,7 @@ from models import Registro
 from datetime import datetime
 
 app = Flask(__name__)
+CORS(app)
 
 # La barra (el slash) se conoce como la página de inicio (página home).
 # Vamos a definir para esta ruta, el comportamiento a seguir.
