@@ -1,0 +1,88 @@
+body{
+ background: url("https://i.pinimg.com/originals/53/14/8f/53148f5fb4cee3edc6b19f37ac91354b.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.contenedorIA{
+height: 500px;
+width:500px;
+}
+.contenedorIA2{
+height: 200px;
+width:500px;
+}
+.completado {
+background-color:  #FFC300;/*amarillo*/
+}
+.colorNavbar{
+background-color: #000000;/*negro*/
+}
+.textNavbar{
+font-family: 'Nunito', sans-serif;
+color: #cecfd3 ;/*gris*/
+}
+.rapidGestor{
+color:  #f017fa  ;/*rosa*/
+}
+.order{
+border: #000000 10px solid;/*color borde card*/
+border-radius:20px;
+}
+.bg-header{
+background-color: #2c2c2b; ;
+}
+.contenedor{
+display: flex;
+flex-direction:row;
+justify-content: space-between;
+}
+.lateral{
+width: 850px;
+}
+.lateralDesarrollador{
+width: 270px;
+text-align: left;
+}
+.bg{
+background-color: #2ae3da;/*azul*/
+font-weight: bold;
+color: #0c0c0c ;
+}
+.bgCompleta{
+background-color:#be2ae3;/*violeta*/
+color: #0c0c0c ;
+}
+.textoSemanacambiado{
+color:#be2ae3;/*violeta*/
+}
+.textoSemana{
+color:#2ae3da;/*azul*/
+}
+.color{
+color:  #a5f4bb ;/*verde*/
+}
+.colorTextoTareas{
+color:  #f3ec7e ;
+}/*amarillo*/
+.borde{
+border:#ffffff  3px solid;
+}
+.btn-warning, .btn-danger{
+background-color: #f378ee !important;/*rosa*/
+}
+.negro{
+background-color: #000000;/*negro*/
+}
+.comentario{
+background-color: #a1ebf8;/*negro*/
+}
+.posicionTitulo{
+margin-top:200px;
+margin-left:280px;
+font-size:99px;
+}
+.efecto :hover {
+background-color:#fcfaf9;
+}
