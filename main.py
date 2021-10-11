@@ -5,16 +5,9 @@ from models import Tarea
 from models import Sinergias
 from models import Registro
 from datetime import datetime
-from decouple import config as config_decouple
-from config import config
 from flask_sqlalchemy import SQLAlchemy
 
-from decouple import config as config_decouple
-
-app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = config('DATABASE_URL', default='localhost')
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-db = SQLAlchemy(app)
+app = Flask(__name__)# en principio ENTENDEMOS que sqlite no es compatible con Heroku
 
 # La barra (el slash) se conoce como la página de inicio (página home).
 # Vamos a definir para esta ruta, el comportamiento a seguir.
