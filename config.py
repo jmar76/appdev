@@ -5,7 +5,7 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///C:\\Users\\floki\\PycharmProjects\\T6_01_jose_manuel_aguero_rueda\\database\\tarea.db'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///database/tarea.db'
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 

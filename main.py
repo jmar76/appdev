@@ -9,20 +9,7 @@ from decouple import config as config_decouple
 from config import config
 from flask_sqlalchemy import SQLAlchemy
 
-
-def create_app(enviroment):
-    app = Flask(__name__)
-
-    app.config.from_object(enviroment)
-
-    return app
-
-enviroment = config['development']
-if config_decouple('PRODUCTION', default=False):
-    enviroment = config['production']
-
-app = create_app(enviroment)
-
+app = Flask(__name__)
 
 # La barra (el slash) se conoce como la página de inicio (página home).
 # Vamos a definir para esta ruta, el comportamiento a seguir.
