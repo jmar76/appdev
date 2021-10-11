@@ -5,8 +5,7 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///database/tarea.db'
-
+    SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/users'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class ProductionConfig(Config):
