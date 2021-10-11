@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
-from flask_cors import CORS
+
 import db
 from models import Tarea
 from models import Sinergias
@@ -11,28 +11,10 @@ from flask_sqlalchemy import SQLAlchemy
 
 from decouple import config as config_decouple
 
-def create_app(enviroment):
-    app = Flask(__name__)
-
-    app.config.from_object(enviroment)
-
-    with app.app_context():
-        db.init_app(app)
-        db.create_all()
-
-    return app
-
-enviroment = config['development']
-if config_decouple('PRODUCTION', default=False):
-    enviroment = config['production']
-
-app = create_app(enviroment)
-
-
-
-
-
-
+app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = config('DATABASE_URL', default='localhost')
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+db = SQLAlchemy(app)
 
 # La barra (el slash) se conoce como la página de inicio (página home).
 # Vamos a definir para esta ruta, el comportamiento a seguir.
