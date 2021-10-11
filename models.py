@@ -4,6 +4,7 @@ from sqlalchemy import Column, Integer, String, Boolean, DateTime
 from werkzeug.security import generate_password_hash
 from werkzeug.security import check_password_hash
 
+
 class Tarea(db.Base):
     __tablename__ = "tarea"
     id = Column(Integer, primary_key=True) # Identificador único de cada tarea (no puede haber dos tareas con el mismo id, por eso es primary key)
